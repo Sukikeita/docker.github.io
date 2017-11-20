@@ -170,12 +170,15 @@ installed.
 
 [Install Docker](/engine/installation/index.md){: class="button outline-btn"}
 <div style="clear:left"></div>
-> **Note**: version 1.13 or higher is required 要求安装1.13或更高的版本。
+
+> **Note**: version 1.13 or higher is required  要求安装1.13或更高的版本。
 
 You should be able to run `docker run hello-world` and see a response like this: 安装后，您应该可以运行 `docker run hello-world`，并且会返回以下内容
-> **Note**: You may need to add your user to the `docker` group in order to call this command without sudo. [Read more](https://docs.docker.com/engine/installation/linux/linux-postinstall/) 为了不需要sudo，你可能需要添加你的user到`docker` 组。
+> **Note**: You may need to add your user to the `docker` group in order to call this command without sudo. [Read more](https://docs.docker.com/engine/installation/linux/linux-postinstall/) 
+为了不需要sudo，你可能需要添加你的user到`docker` 组。
 
-> **Note**: If there are networking issues in your setup, `docker run hello-world` may fail to execute successfully. In case you are behind a proxy server and you suspect that it blocks the connection, check the [next part](https://docs.docker.com/get-started/part2/) of the tutorial. 如果你的安装中出现网络问题，`docker run hello-world`可能执行不成功。如果你使用代理，并且认为这是堵塞网络的原因，请查看链接中的说明
+> **Note**: If there are networking issues in your setup, `docker run hello-world` may fail to execute successfully. In case you are behind a proxy server and you suspect that it blocks the connection, check the [next part](https://docs.docker.com/get-started/part2/) of the tutorial. 如果你的安装中出现网络问题，`docker run hello-world`
+可能执行不成功。如果你使用代理，并且认为这是堵塞网络的原因，请查看链接中的说明
 
 ```shell
 $ docker run hello-world
