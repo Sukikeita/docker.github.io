@@ -6,11 +6,11 @@ description: Learn how to write, build, and run a simple app -- the Docker way.
 
 {% include_relative nav.html selected="2" %}
 
-## Prerequisites
+## Prerequisites 前提条件
 
-- [Install Docker version 1.13 or higher](/engine/installation/).
-- Read the orientation in [Part 1](index.md).
-- Give your environment a quick test run to make sure you're all set up:
+- [Install Docker version 1.13 or higher](/engine/installation/). 安装1.13或以上的Docker
+- Read the orientation in [Part 1](index.md). 阅读index
+- Give your environment a quick test run to make sure you're all set up: 快速测试docker是否安装成功
 
   ```shell
   docker run hello-world
@@ -21,7 +21,9 @@ tutorial go swimmingly. For example, legacy apps like Docker Toolbox
 might give you unexpected results for local IP addresses and older
 versions of Docker do not support all features demo'ed here.
 
-## Introduction
+请使用最新的Docker版本和客户端来帮助教程顺利进行。 例如，像Docker Toolbox这样的传统应用程序可能会为本地IP地址带来意想不到的结果，而较早版本的Docker并不支持这里演示的所有功能。
+
+## Introduction 介绍
 
 It's time to begin building an app the Docker way. We'll start at the bottom of
 the hierarchy of such an app, which is a container, which we cover on this page.
@@ -30,11 +32,14 @@ production, covered in [Part 3](part3.md). Finally, at the top level is the
 stack, defining the interactions of all the services, covered in
 [Part 5](part5.md).
 
-- Stack
-- Services
-- **Container** (you are here)
+现在是开始构建Docker方式的应用程序的时候了。 我们将从这个应用程序的层次结构的底部开始，这个应用程序是一个容器，我们在这个页面上覆盖。 在这个层次上面是一个服务，它定义了容器在生产中的行为方式，在[Part 3]（part3.md）中有所介绍。 最后，在顶层是堆栈，定义了所有服务的交互，参见[第5部分]（part5.md）。
 
-## Your new development environment
+
+- Stack 堆栈
+- Services 服务
+- **Container** (you are here) **容器**（你在的地方）
+
+## Your new development environment 新的开发环境
 
 In the past, if you were to start writing a Python app, your first
 order of business was to install a Python runtime onto your machine. But,
@@ -42,14 +47,21 @@ that creates a situation where the environment on your machine has to be just
 so in order for your app to run as expected; ditto for the server that runs
 your app.
 
+在过去，如果你要开始编写一个Python应用程序，你的第一步就是在你的机器上安装一个Python运行库。 但是，这会造成您的机器上的环境必须如此，以使您的应用程序按预期运行。同样地，运行你的应用程序的服务器也需要这样的配置。
+
 With Docker, you can just grab a portable Python runtime as an image, no
 installation necessary. Then, your build can include the base Python image
 right alongside your app code, ensuring that your app, its dependencies, and the
 runtime, all travel together.
 
+使用Docker，您可以将一个可移植的Python程序作为一个镜像来获取，无需安装。 然后，您的构建可以将基础Python镜像与应用程序代码一起包括在内，确保您的应用程序，依赖项和runtime都一起旅行。
+
+
 These portable images are defined by something called a `Dockerfile`.
 
-## Define a container with a `Dockerfile`
+这些可移植的镜像是由一个叫做“Dockerfile”的东西来定义的。
+
+## Define a container with a `Dockerfile` 使用`Dockerfile`定义一个容器
 
 `Dockerfile` will define what goes on in the environment inside your
 container. Access to resources like networking interfaces and disk drives is
@@ -59,12 +71,16 @@ be specific about what files you want to "copy in" to that environment. However,
 after doing that, you can expect that the build of your app defined in this
 `Dockerfile` will behave exactly the same wherever it runs.
 
+`Dockerfile`将定义你的容器内的环境中发生了什么。 访问像网络接口和磁盘驱动器这样的资源是在这个环境中虚拟化的，这个环境与系统的其他部分是隔离的，所以你必须将端口映射到外部世界，并具体说明你想“拷入”哪些文件 那个环境。 然而，在这样做之后，你可以预期在这个`Dockerfile`中定义的应用程序的构建在任何运行的地方都会表现得完全一样。
+
 ### `Dockerfile`
 
 Create an empty directory. Change directories (`cd`) into the new directory,
 create a file called `Dockerfile`, copy-and-paste the following content into
 that file, and save it. Take note of the comments that explain each statement in
 your new Dockerfile.
+
+创建一个空目录。 将目录（`cd`）更改到新目录中，创建一个名为`Dockerfile`的文件，将以下内容复制并粘贴到该文件中并保存。 注意新Dockerfile中每条语句的注释。
 
 ```conf
 # Use an official Python runtime as a parent image
