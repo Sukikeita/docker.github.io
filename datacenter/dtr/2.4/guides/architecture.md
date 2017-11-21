@@ -40,8 +40,9 @@ When you install DTR on a node, the following containers are started:
 
 | Name                                 | Description                                                                                                                        |
 |:-------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|
-| dtr-api-&lt;replica_id&gt;           | Executes the DTR business logic. It serves the DTR web application, and API执行DTR业务逻辑。 它服务于DTR Web应用程序和API
-                                                        |
+| dtr-api-&lt;replica_id&gt;           | Executes the DTR business logic. It serves the DTR web application, and API                                                        
+的
+|
 | dtr-garant-&lt;replica_id&gt;        | Manages DTR authentication                                                                                                         |
 | dtr-jobrunner-&lt;replica_id&gt;     | Runs cleanup jobs in the background                                                                                                |
 | dtr-nginx-&lt;replica_id&gt;         | Receives http and https requests and proxies them to other DTR components. By default it listens to ports 80 and 443 of the host   |
