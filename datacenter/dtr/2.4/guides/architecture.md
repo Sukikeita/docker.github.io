@@ -1,34 +1,47 @@
 ---
 title: DTR architecture
 description: Learn about the architecture of Docker Trusted Registry.
+了解DTR的架构
 keywords: registry, dtr, architecture
+注册服务器 dtr 架构
 ---
 
 Docker Trusted Registry (DTR) is a containerized application that runs on a
 Docker Universal Control Plane cluster.
+
+Docker可信注册表（DTR）是在Docker通用控制平面群集上运行的集装箱式应用程序。
 
 ![](images/architecture-1.svg)
 
 Once you have DTR deployed, you use your Docker CLI client to login, push, and
 pull images.
 
-## Under the hood
+一旦安装了DTR，你使用你的Docker　CLI客户端登陆、推送和拉取镜像。
+
+## Under the hood 引擎盖下
 
 For high-availability you can deploy multiple DTR replicas, one on each UCP
 worker node.
+
+为获得高可用性，您可以部署多个DTR副本，每个UCP工作节点上有一个副本。
 
 ![](images/architecture-2.svg)
 
 All DTR replicas run the same set of services and changes to their configuration
 are automatically propagated to other replicas.
 
-## DTR internal components
+所有DTR副本都运行相同的一组服务，并且对其配置的更改会自动传播到其他副本。
+
+
+## DTR internal components DTR内部组成
 
 When you install DTR on a node, the following containers are started:
+当你吧把DTR安装在一个节点山个，以下容器将启动
 
 | Name                                 | Description                                                                                                                        |
 |:-------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|
-| dtr-api-&lt;replica_id&gt;           | Executes the DTR business logic. It serves the DTR web application, and API                                                        |
+| dtr-api-&lt;replica_id&gt;           | Executes the DTR business logic. It serves the DTR web application, and API执行DTR业务逻辑。 它服务于DTR Web应用程序和API
+                                                        |
 | dtr-garant-&lt;replica_id&gt;        | Manages DTR authentication                                                                                                         |
 | dtr-jobrunner-&lt;replica_id&gt;     | Runs cleanup jobs in the background                                                                                                |
 | dtr-nginx-&lt;replica_id&gt;         | Receives http and https requests and proxies them to other DTR components. By default it listens to ports 80 and 443 of the host   |
