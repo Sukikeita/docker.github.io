@@ -1,7 +1,9 @@
 ---
 title: Permission levels in DTR
-description: Learn about the permission levels available in Docker Trusted Registry.了解Docker信任注册器的权限级别
-keywords: registry, security, permissions 注册 安全 权限
+description: Learn about the permission levels available in Docker Trusted Registry.
+了解Docker信任注册器的权限级别
+keywords: registry, security, permissions
+注册 安全 权限
 ---
 
 Docker Trusted Registry allows you to define fine-grain permissions over image
