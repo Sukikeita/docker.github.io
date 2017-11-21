@@ -41,7 +41,6 @@ When you install DTR on a node, the following containers are started:
 | Name                                 | Description                                                                                                                        |
 |:-------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|
 | dtr-api-&lt;replica_id&gt;           | Executes the DTR business logic. It serves the DTR web application, and API                                                        
-µÄ
 |
 | dtr-garant-&lt;replica_id&gt;        | Manages DTR authentication                                                                                                         |
 | dtr-jobrunner-&lt;replica_id&gt;     | Runs cleanup jobs in the background                                                                                                |
