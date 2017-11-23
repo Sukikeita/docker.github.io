@@ -10,6 +10,8 @@ keywords: registry, security, permissions, organizations
 When a user creates a repository, only that user has permissions to make changes
 to the repository.
 
+当用户创建存储库时，只有该用户有权进行更改到存储库。
+
 For team workflows, where multiple users have permissions to manage a set of
 common repositories, create an organization. By default, DTR has one
 organization called 'docker-datacenter', that is shared between DTR and UCP.
