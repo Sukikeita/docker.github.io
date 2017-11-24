@@ -24,21 +24,24 @@ Docker Trusted Registry maintains data about: DTR维护以下数据：
 |:-----------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------|
 | Configurations                     | The DTR cluster configurations DTR群集配置|
 | Repository metadata                | The metadata about the repositories and images deployed  存储库和镜像的元数据|
-| Access control to repos and images | Permissions for teams and repositories                                                                                                            |
-| Notary data                        | Notary tags and signatures                                                                                                                        |
-| Scan results                       | Security scanning results for images                                                                                                              |
-| Certificates and keys              | The certificates, public keys, and private keys that are used for mutual TLS communication                                                        |
-| Images content                     | The images you push to DTR. This can be stored on the filesystem of the node running DTR, or other storage system, depending on the configuration |
+| Access control to repos and images | Permissions for teams and repositories团队和存储库的权限|
+| Notary data                        | Notary tags and signatures公证标签和签名|
+| Scan results                       | Security scanning results for images镜像的安全扫描结果|
+| Certificates and keys              | The certificates, public keys, and private keys that are used for mutual TLS communication用于相互TLS通信的证书，公钥和私钥|
+| Images content                     | The images you push to DTR. This can be stored on the filesystem of the node running DTR, or other storage system, depending on the configuration您推送给DTR的镜像。 这可以存储在运行DTR或其他存储系统的节点的文件系统上，具体取决于配置|
 
 This data is persisted on the host running DTR, using named volumes.
+这些数据在使用命名卷运行DTR的主机上保存。 了解有关DTR命名卷的更多信息。
 [Learn more about DTR named volumes](../architecture.md).
 
 To perform a backup of a DTR node, run the `docker/dtr backup` command. This
 command backups up the following data:
+要执行DTR节点的备份，请运行`docker/dtr backup`命令。 该命令备份以下数据：
+
 
 | Data                               | Backed up | Description                                                    |
 |:-----------------------------------|:----------|:---------------------------------------------------------------|
-| Configurations                     | yes       | DTR settings                                                   |
+| Configurations                     | yes       | DTR settings DTR设置                                           |
 | Repository metadata                | yes       | Metadata like image architecture and size                      |
 | Access control to repos and images | yes       | Data about who has access to which images                      |
 | Notary data                        | yes       | Signatures and digests for images that are signed              |
