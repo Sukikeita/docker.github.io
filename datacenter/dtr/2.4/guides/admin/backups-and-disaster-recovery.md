@@ -42,17 +42,17 @@ command backups up the following data:
 | Data                               | Backed up | Description                                                    |
 |:-----------------------------------|:----------|:---------------------------------------------------------------|
 | Configurations                     | yes       | DTR settings DTR设置                                           |
-| Repository metadata                | yes       | Metadata like image architecture and size                      |
-| Access control to repos and images | yes       | Data about who has access to which images                      |
-| Notary data                        | yes       | Signatures and digests for images that are signed              |
-| Scan results                       | yes       | Information about vulnerabilities in your images               |
-| Certificates and keys              | yes       | TLS certificates and keys used by DTR                          |
-| Image content                      | no        | Needs to be backed up separately, depends on DTR configuration |
-| Users, orgs, teams                 | no        | Create a UCP backup to backup this data                        |
-| Vulnerability database             | no        | Can be re-downloaded after a restore                           |
+| Repository metadata                | yes       | Metadata like image architecture and size 保存镜像结果和大小等元数据 |
+| Access control to repos and images | yes       | Data about who has access to which images  保存镜像及其访问权限的数据|
+| Notary data                        | yes       | Signatures and digests for images that are signed 对已签名的镜像进行签名和摘要数据|
+| Scan results                       | yes       | Information about vulnerabilities in your images 有关您的镜像中的漏洞的信息|
+| Certificates and keys              | yes       | TLS certificates and keys used by DTR TLS证书和DTR使用的密钥|
+| Image content                      | no        | Needs to be backed up separately, depends on DTR configuration 需要分别备份的镜像内容，取决于DTR配置|
+| Users, orgs, teams                 | no        | Create a UCP backup to backup this data 创建UCP备份以备份user、org和team数据|
+| Vulnerability database             | no        | Can be re-downloaded after a restore 在恢复后重新下载|
 
 
-## Backup DTR data
+## Backup DTR data 备份DTR数
 
 To create a backup of DTR you need to:
 
