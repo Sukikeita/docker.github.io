@@ -1,7 +1,8 @@
 ---
 title: DTR backups and recovery
-description: Learn how to back up your Docker Trusted Registry cluster, and to recover your cluster from an existing backup.
-keywords: registry, high-availability, backup, recovery
+description: Learn how to back up your Docker Trusted Registry cluster, and to recover your cluster from an existing backup.了解如何备份您的Docker Trusted Registry集群，并从现有备份中恢复您的集群。
+
+keywords: registry, high-availability, backup, recovery 注册 高性能 备份 恢复
 ---
 
 {% assign image_backup_file = "backup-images.tar" %}
@@ -13,14 +14,17 @@ way to restore DTR to a working state, is by recovering from a backup. This
 is why it's important to ensure replicas are healthy and perform frequent
 backups.
 
-## Data managed by DTR
+DTR要求其复制品的大多数（n / 2 + 1）在任何时候都健康地工作。 因此，如果大多数副本不健康或丢失，将DTR恢复到工作状态的唯一方法是从备份恢复。 这就是为什么重要的是要确保副本是健康的，并执行频繁的备份。
 
-Docker Trusted Registry maintains data about:
+## Data managed by DTR DTR管理的数据
+
+Docker Trusted Registry maintains data about: DTR维护以下数据：
 
 | Data                               | Description                                                                                                                                       |
 |:-----------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------|
-| Configurations                     | The DTR cluster configurations                                                                                                                    |
-| Repository metadata                | The metadata about the repositories and images deployed                                                                                           |
+| Configurations                     | The DTR cluster configurations DTR群集配置
+                                                 |
+| Repository metadata                | The metadata about the repositories and images deployed  存储库和镜像的元数据                                                                        |
 | Access control to repos and images | Permissions for teams and repositories                                                                                                            |
 | Notary data                        | Notary tags and signatures                                                                                                                        |
 | Scan results                       | Security scanning results for images                                                                                                              |
