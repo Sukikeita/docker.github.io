@@ -22,9 +22,8 @@ Docker Trusted Registry maintains data about: DTR维护以下数据：
 
 | Data                               | Description                                                                                                                                       |
 |:-----------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------|
-| Configurations                     | The DTR cluster configurations DTR群集配置
-                                                 |
-| Repository metadata                | The metadata about the repositories and images deployed  存储库和镜像的元数据                                                                        |
+| Configurations                     | The DTR cluster configurations DTR群集配置|
+| Repository metadata                | The metadata about the repositories and images deployed  存储库和镜像的元数据|
 | Access control to repos and images | Permissions for teams and repositories                                                                                                            |
 | Notary data                        | Notary tags and signatures                                                                                                                        |
 | Scan results                       | Security scanning results for images                                                                                                              |
