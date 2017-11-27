@@ -1,7 +1,10 @@
 ---
-title: Docker Trusted Registry overview
+title: Docker Trusted Registry overview Docker信任注册
 description: Learn how to install, configure, and use Docker Trusted Registry.
+了解如何安装、配置、使用DTR
 keywords: registry, repository, images
+注册 存储库 镜像
+
 redirect_from:
 - /docker-hub-enterprise/
 - /docker-trusted-registry/overview/
